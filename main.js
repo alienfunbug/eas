@@ -1,8 +1,8 @@
 const MAX_GRID_SIZE = 100 * 100;
 console.log(MAX_GRID_SIZE);
-let darkness = 0.1;
-let color = Math.floor(Math.random()*16777215).toString(16);
-console.log(color);
+//let darkness = 0.1;
+//let color = Math.floor(Math.random()*16777215).toString(16);
+//console.log(color);
 
 //console.log(`hsla(198.82, 76.12%, 73.73%, ${darkness})`);
 
@@ -30,7 +30,7 @@ function addMouseListenerFullGrid() {
         unit.style.background = `#${Math.floor(Math.random()*16777215).toString(16)}`;
       } else {
         unit.style.background = `#${Math.floor(Math.random()*16777215).toString(16)}`;
-        console.log(darkness);
+        //console.log(darkness);
       }
     });
   });
@@ -42,7 +42,7 @@ function clearFullGrid() {
   let allSketchUnits = document.querySelectorAll(".sketchUnit");
   allSketchUnits.forEach((unit) => {
     unit.style.background = "#FFFFFF";
-    darkness = 0.1;
+    //darkness = 0.1;
   });
 }
 
