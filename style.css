@@ -9,17 +9,19 @@
     max-height: var(--canvas-size);
     flex-wrap: wrap;
     overflow: hidden;
-
 }
 
-.test{
+.sketchUnit{
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
-    border: thin solid green;
+    border: thin solid red;
     min-width: calc(var(--canvas-size) / var(--input-size));
     min-height: calc(var(--canvas-size) / var(--input-size));
     padding:0px;
     margin:0px;
-
 }
+
+/*.sketchUnit:hover {
+    background-color: yellow;
+  } */
