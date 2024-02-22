@@ -16,13 +16,19 @@ for (let i =0; i < MAX_GRID_SIZE; i++){
 }
 
 
-//need hover background changes to be permanent
-
+//need hover background changes to be permanent and applied to all sketch units
 const sketchUnit = document.querySelector('.sketchUnit');
-sketchUnit.addEventListener('mouseenter',()=>{
-    sketchUnit.style.background = "#89cfef";
-    alert("test");
-}); 
+const allSketchUnits = document.querySelectorAll('.sketchUnit');
+//console.log(allSketchUnits);
+allSketchUnits.forEach((unit)=>{
+    unit.addEventListener('mouseenter',()=>{
+        unit.style.background = "#89cfef";
+    }); 
+});
+
+
+
+
 
 /*
 element = document.getElementById('sketchUnit');
