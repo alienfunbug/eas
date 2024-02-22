@@ -1,6 +1,8 @@
 const MAX_GRID_SIZE = 100 * 100;
 console.log(MAX_GRID_SIZE);
 let darkness = 0.1;
+let color = Math.floor(Math.random()*16777215).toString(16);
+console.log(color);
 
 //console.log(`hsla(198.82, 76.12%, 73.73%, ${darkness})`);
 
@@ -12,7 +14,7 @@ function drawFullGrid() {
   for (let i = 0; i < MAX_GRID_SIZE; i++) {
     const div = document.createElement("div");
     div.setAttribute("class", "sketchUnit");
-    div.style.setProperty("background", "rgb(255, 255, 255)");
+    div.style.setProperty("background", "#FFFFFF");
     container.appendChild(div);
   }
 }
@@ -25,9 +27,9 @@ function addMouseListenerFullGrid() {
   allSketchUnits.forEach((unit) => {
     unit.addEventListener("mouseenter", () => {
       if (unit.style.background == "rgb(255, 255, 255)") {
-        unit.style.background = `hsla(198.82, 76.12%, 73.73%, ${darkness})`;
+        unit.style.background = `#${Math.floor(Math.random()*16777215).toString(16)}`;
       } else {
-        unit.style.background = `hsla(198.82, 76.12%, 73.73%, ${(darkness += 0.1)})`;
+        unit.style.background = `#${Math.floor(Math.random()*16777215).toString(16)}`;
         console.log(darkness);
       }
     });
@@ -39,7 +41,7 @@ function clearFullGrid() {
   let sketchUnit = document.querySelector(".sketchUnit");
   let allSketchUnits = document.querySelectorAll(".sketchUnit");
   allSketchUnits.forEach((unit) => {
-    unit.style.background = "rgb(255, 255, 255)";
+    unit.style.background = "#FFFFFF";
     darkness = 0.1;
   });
 }
