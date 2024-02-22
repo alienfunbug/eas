@@ -33,7 +33,7 @@ function addMouseListenerFullGrid() {
       } else {
         //unit.style.background = `#${Math.floor(Math.random()*16777215).toString(16)}`;
         darkness -= 0.1;
-        unit.style.filter = `brightness(${Math.max(darkness,.01)})`;
+        unit.style.filter = `brightness(${Math.max(darkness,0.2)})`;
         console.log(darkness);
         //background-color: darken(#eee, 10%);
       }
