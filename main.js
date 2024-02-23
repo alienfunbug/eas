@@ -26,14 +26,14 @@ function addMouseListenerFullGrid() {
   let allSketchUnits = document.querySelectorAll(".sketchUnit");
 
   allSketchUnits.forEach((unit) => {
-    unit.addEventListener("mouseenter", function (){
+    unit.addEventListener("mouseenter", () =>{
       if (unit.style.background == "rgb(255, 255, 255)") {
         //unit.style.background = `#89cfef`;
         unit.style.background = `#${Math.floor(Math.random()*16777215).toString(16)}`;
       } else {
         //unit.style.background = `#${Math.floor(Math.random()*16777215).toString(16)}`;
-        darkness -= 0.1;
-        unit.style.filter = `brightness(${Math.max(darkness,0.2)})`;
+        darkness -= 0.05;
+        unit.style.filter = `brightness(${Math.max(darkness,0.1)})`;
         console.log(darkness);
         //background-color: darken(#eee, 10%);
       }
